@@ -1,0 +1,127 @@
+/* =========================================================
+   Farrel Edric — ACE project slider
+   Scroll-snap carousel: works with CSS alone, JS only adds
+   arrows / dots / keyboard. No layout dependency on JS.
+   ========================================================= */
+.js .project__media--slider { cursor: default; }
+
+.ace-slider {
+  position: relative;
+  width: 100%;
+}
+
+.ace-slider__viewport {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* deliberately NOT scroll-behavior:smooth - with it, a programmatic
+     scrollLeft assignment never lands in engines that skip the animation,
+     which made the arrows appear dead. Easing is added from JS instead. */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior-x: contain;
+}
+.ace-slider__viewport::-webkit-scrollbar { display: none; }
+
+.ace-slider__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  margin: 0;
+}
+.ace-slider__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* the slides are presentational imagery inside a carousel: dragging one must
+     never start a browser drag-save, and it must not behave like selectable text */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: auto;
+}
+.ace-slider__slide { user-select: none; -webkit-user-select: none; }
+/* the viewport is a scroll region, not a link target */
+.ace-slider__viewport { touch-action: pan-x; }
+
+/* ── controls ─────────────────────────────────────────── */
+.ace-slider__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  backdrop-filter: blur(8px);
+  color: var(--ink);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease), background-color 0.3s var(--ease),
+              border-color 0.3s var(--ease), transform 0.3s var(--ease-out);
+}
+.ace-slider__nav svg { width: 17px; height: 17px; }
+.ace-slider__nav--prev { left: 0.85rem; }
+.ace-slider__nav--next { right: 0.85rem; }
+.ace-slider:hover .ace-slider__nav,
+.ace-slider__nav:focus-visible { opacity: 1; }
+.ace-slider__nav:hover { border-color: var(--accent); transform: translateY(-50%) scale(1.06); }
+.ace-slider__nav[disabled] { opacity: 0.28; pointer-events: none; }
+
+.ace-slider__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.85rem;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.4rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+}
+.ace-slider__dots button {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted-dim);
+  transition: background-color 0.3s var(--ease), transform 0.3s var(--ease-out);
+}
+.ace-slider__dots button:hover { background: var(--ink); }
+.ace-slider__dots button[aria-selected='true'] {
+  background: var(--accent);
+  transform: scale(1.5);
+}
+
+/* caption + counter sit outside the image so they never cover the UI */
+.ace-slider__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ace-slider__count { color: var(--muted-dim); flex: none; }
+
+@media (max-width: 640px) {
+  .ace-slider__nav { width: 34px; height: 34px; }
+  .ace-slider__nav--prev { left: 0.4rem; }
+  .ace-slider__nav--next { right: 0.4rem; }
+  .ace-slider__meta { font-size: 0.66rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ace-slider__viewport { scroll-snap-type: none; }
+}

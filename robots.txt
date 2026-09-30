@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://farreledric.github.io/portfolio/sitemap.xml
