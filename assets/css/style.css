@@ -677,27 +677,7 @@ html[data-theme='light'] .hero__visual:hover .hero__portrait { filter: saturate(
 .timeline__main { display: grid; gap: 0.55rem; }
 .timeline__main .org { color: var(--ink-soft); font-weight: 500; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
 .timeline__main .org .dot { color: var(--accent); }
-.org--logo { align-items: center; row-gap: 0.4rem; }
-.org__logo {
-  flex: none;
-  height: clamp(20px, 2.1vw, 28px);
-  width: auto;
-  object-fit: contain;
-  opacity: 0.94;
-  transition: opacity 0.3s var(--ease);
-}
-.org:hover .org__logo { opacity: 1; }
-/* Two baked variants per logo: several wordmarks are near-black (Yazaki, the
-   Naratel navy), and a CSS filter cannot lift true black off a dark page.
-   Each theme therefore shows its own recoloured copy. */
-html[data-theme='dark'] .org__logo--light { display: none; }
-html[data-theme='light'] .org__logo--dark { display: none; }
-.timeline__main .note { color: var(--muted); font-weight: 400; font-size: 0.9em; }
-.timeline__main .period {
-  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--muted-dim);
-}
-.timeline__main .prose { margin-top: 0.3rem; }
+html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 .bullets { margin-top: 0.8rem; display: grid; gap: 0.5rem; }
 .bullets li {
   position: relative; padding-left: 1.15rem;

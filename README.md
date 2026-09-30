@@ -85,6 +85,8 @@ Scroll reveals are driven by `assets/js/main.js` using `getBoundingClientRect` o
 | Email, GitHub, LinkedIn URLs | `Profile LINKED in.pdf` / GitHub API |
 | Hero portrait | `D:/KERJA FARREL/FOTO DATA DIRI/Farrel Jass.jpg` (blue mirror border cropped) |
 
+Employer logos are deliberately **not** shown: the marks are dark-ink art (AirNav blue, Yazaki black, Naratel navy) and every attempt to make them legible on a near-black page either destroyed the brand colour or needed a white plate that read as a badge, so the experience entries are typographic only.
+
 Deliberately **not** shown anywhere: the phone number (kept out per the brief), any invented metric, skill rating, testimonial, employer logo or stock photo.
 
 ---
@@ -100,7 +102,6 @@ Deliberately **not** shown anywhere: the phone number (kept out per the brief), 
 7. **AirNav Indonesia entry — needs your details.** Added on your instruction, but the period and location are unverified: LinkedIn refused a re-fetch (403) and the period isn't recoverable from GitHub commit dates, so the date slot is deliberately empty with a `<!-- TODO Farrel -->` marker in `index.html`. **Note the title tension:** the Experience entry reads *Staf Administrasi Teknologi Informasi dan Operasional · Internship*, while the About quick-fact "Most recent role" says *Full-stack Developer — AirNav Indonesia*. If one is wrong, fix both places (search `AirNav` in `index.html`).
 8. **Internship labels.** Naratel Group and PT. Surabaya Autocomp Indonesia are labelled *Internship* because the CV describes them as such (`Intern`); if you want them presented as regular roles, edit those two `.note` spans.
 9. **Small date discrepancies between your own documents.** SMKN 8 Malang is `Jul 2019 – Agt 2022` on the CV but `Juni 2020 – Juni 2022` on the LinkedIn export — the site uses the CV version. Politeknik Negeri Malang is `Agt 2022 – Sekarang` on the CV and `Juli 2022 – Agustus 2026` on LinkedIn — the site uses `2022–2026`. Align them if the LinkedIn version is the correct one.
-
 
 ---
 
