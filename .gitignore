@@ -1,1 +1,5 @@
 _preview/
+
+_probe*.html
+_shot*.html
+.probe*.html
