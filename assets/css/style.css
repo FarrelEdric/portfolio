@@ -504,7 +504,8 @@ html[data-theme='light'] .hero__line--outline { -webkit-text-stroke-color: var(-
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
 }
 .hero__portrait {
   position: relative;
@@ -521,20 +522,28 @@ html[data-theme='light'] .hero__line--outline { -webkit-text-stroke-color: var(-
 /* Dark: the vignette variant melts edge-to-edge into the near-black hero.
    Light: a black photo cannot fade into off-white - a soft fade just leaves a
    grey smear - so it is presented as an opaque plate with a hairline border,
-   which keeps true blacks and reads as a deliberate crop. */
+   which keeps true blacks and reads as a deliberate crop.
+   The plate is drawn ON THE IMAGE, not on <picture>: the picture box is only as
+   wide as the photo in some viewports and wider in others, which left a visible
+   white margin beside the photo. On the image the plate always hugs it exactly. */
 html[data-theme='light'] .hero__visual picture {
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 26px 60px -30px rgba(17, 17, 17, 0.42),
-              0 2px 0 0 rgba(255, 255, 255, 0.6) inset;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
 }
 html[data-theme='light'] .hero__visual .hero__portrait {
   max-height: min(72svh, 680px);
   width: min(100%, 460px);
   filter: none;
-  border-radius: 0;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px var(--line),
+              0 26px 60px -30px rgba(17, 17, 17, 0.42);
 }
-html[data-theme='light'] .hero__visual:hover .hero__portrait { filter: saturate(1.05); }
+html[data-theme='light'] .hero__visual:hover .hero__portrait {
+  filter: saturate(1.05);
+  box-shadow: 0 0 0 1px var(--line),
+              0 30px 68px -32px rgba(17, 17, 17, 0.5);
+}
 .hero__caption {
   position: absolute;
   right: -0.25rem; top: 12%;
@@ -694,11 +703,14 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 /* log magang per bulan: sengaja tanpa kartu, hanya garis tipis dan tipografi
    supaya terasa satu bahasa dengan Experience dan Education */
 .journal__progress {
-  display: flex; align-items: center; gap: 0.5rem;
+  display: flex; align-items: center; gap: 0 clamp(1rem, 3vw, 2rem);
   margin-top: clamp(1.6rem, 4vh, 2.4rem);
   padding-bottom: 1.1rem;
   border-bottom: 1px solid var(--line);
 }
+/* dua kelompok: penanda bulan dan hitungannya. Tanpa ini hitungannya terdorong
+   jauh ke kanan dan menyisakan jurang kosong di layar lebar */
+.journal__dots { display: flex; align-items: center; gap: 0.5rem; }
 .journal__dot {
   width: 22px; height: 2px; border-radius: 1px;
   background: var(--line-strong);
@@ -707,9 +719,11 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 .journal__dot.is-done { background: var(--accent); }
 .journal__dot.is-next { background: var(--line); }
 .journal__count {
-  margin-left: auto;
   font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--muted-dim);
+  padding-left: clamp(1rem, 3vw, 2rem);
+  border-left: 1px solid var(--line);
+  white-space: nowrap;
 }
 
 .journal { display: grid; gap: 0; }
@@ -727,20 +741,25 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 }
 .journal__meta .month { color: var(--accent-ink); }
 .journal__meta .tag { color: var(--muted-dim); }
+/* kolom teks entri memakai lebar penuh kolom isi, sama seperti Experience dan
+   Education — tanpa indentasi tambahan supaya semua section rata di satu garis */
 .journal__main { display: grid; gap: 0.6rem; }
 .journal__main .prose { max-width: 62ch; }
-/* daftar hal yang dipelajari: dipisah garis tipis, tanpa titik atau kartu */
+/* daftar pelajaran: satu butir per baris dengan garis aksen kecil, mengikuti
+   pola daftar di Experience supaya tidak ada pembungkusan yang tidak rapi */
 .journal__learned {
-  display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem;
-  margin-top: 0.5rem; padding-top: 0.9rem;
+  display: grid; gap: 0.55rem;
+  margin-top: 0.7rem; padding-top: 0.9rem;
   border-top: 1px solid var(--line);
+  max-width: 62ch;
   font-size: var(--step--1); color: var(--muted);
 }
-.journal__learned li { display: inline-flex; align-items: baseline; gap: 0.45rem; }
+.journal__learned li {
+  position: relative; padding-left: 1.15rem; line-height: 1.6;
+}
 .journal__learned li::before {
-  content: ''; width: 5px; height: 1px;
-  background: var(--accent); flex: none;
-  transform: translateY(-0.28em);
+  content: ''; position: absolute; left: 0; top: 0.72em;
+  width: 6px; height: 1px; background: var(--accent);
 }
 .journal__next {
   margin-top: 1.4rem;
@@ -933,12 +952,17 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
   .hero__inner { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
   .hero__visual { order: 2; align-self: center; }
   .hero__visual picture {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.hero__portrait { width: min(78%, 360px); max-height: 46svh; }
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .hero__portrait { width: min(78%, 360px); max-height: 46svh; }
+  html[data-theme='light'] .hero__visual .hero__portrait {
+    width: min(78%, 360px);
+    max-height: 46svh;
+  }
   .hero__caption { display: none; }
   .hero__disc { width: min(72%, 380px); }
   .hero__intro { max-width: 58ch; }
@@ -972,7 +996,6 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 
   .journal__entry { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
   .journal__meta { flex-direction: row; gap: 1rem; }
-  .journal__learned { flex-direction: column; gap: 0.45rem; }
   .journal__count { font-size: 0.62rem; }
   .journal__dot { width: 16px; }
 
