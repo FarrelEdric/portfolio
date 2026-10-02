@@ -617,7 +617,8 @@ html[data-theme='light'] .hero__visual:hover .hero__portrait { filter: saturate(
   content: ''; width: 26px; height: 1px; background: var(--accent);
 }
 .body > .h2 + .prose, .body > .h2 + .lede { margin-top: 1.4rem; }
-.body > .timeline, .body > .skills, .body > .certs { margin-top: clamp(2rem, 5vh, 3.2rem); }
+.body > .timeline, .body > .skills, .body > .certs,
+.body > .journal, .body > .journal__progress { margin-top: clamp(2rem, 5vh, 3.2rem); }
 
 /* reveal on scroll.
    Driven by main.js (getBoundingClientRect on scroll). Deliberately NOT using
@@ -688,6 +689,64 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
   width: 6px; height: 1px; background: var(--accent);
 }
 .timeline--tight .timeline__item { padding-block: clamp(1.4rem, 3vh, 2rem); }
+
+/* ── journal ──────────────────────────────────────────── */
+/* log magang per bulan: sengaja tanpa kartu, hanya garis tipis dan tipografi
+   supaya terasa satu bahasa dengan Experience dan Education */
+.journal__progress {
+  display: flex; align-items: center; gap: 0.5rem;
+  margin-top: clamp(1.6rem, 4vh, 2.4rem);
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+.journal__dot {
+  width: 22px; height: 2px; border-radius: 1px;
+  background: var(--line-strong);
+  transition: background 0.4s var(--ease);
+}
+.journal__dot.is-done { background: var(--accent); }
+.journal__dot.is-next { background: var(--line); }
+.journal__count {
+  margin-left: auto;
+  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted-dim);
+}
+
+.journal { display: grid; gap: 0; }
+.journal__entry {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1.8rem, 4vh, 2.6rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+.journal__meta {
+  display: flex; flex-direction: column; gap: 0.4rem;
+  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.journal__meta .month { color: var(--accent-ink); }
+.journal__meta .tag { color: var(--muted-dim); }
+.journal__main { display: grid; gap: 0.6rem; }
+.journal__main .prose { max-width: 62ch; }
+/* daftar hal yang dipelajari: dipisah garis tipis, tanpa titik atau kartu */
+.journal__learned {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem;
+  margin-top: 0.5rem; padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: var(--step--1); color: var(--muted);
+}
+.journal__learned li { display: inline-flex; align-items: baseline; gap: 0.45rem; }
+.journal__learned li::before {
+  content: ''; width: 5px; height: 1px;
+  background: var(--accent); flex: none;
+  transform: translateY(-0.28em);
+}
+.journal__next {
+  margin-top: 1.4rem;
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted-dim);
+}
 
 /* ── projects ─────────────────────────────────────────── */
 .projects { margin-top: clamp(2.5rem, 6vh, 4rem); display: grid; gap: clamp(3rem, 8vh, 6rem); }
@@ -886,7 +945,8 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 
   .grid-aside { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
   .aside { position: static; }
-  .body > .timeline, .body > .skills, .body > .certs { margin-top: 2rem; }
+  .body > .timeline, .body > .skills, .body > .certs,
+  .body > .journal, .body > .journal__progress { margin-top: 2rem; }
 
   .project { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
   .project--flip .project__media { order: 0; }
@@ -909,6 +969,12 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 
   .timeline__item { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
   .timeline__meta { flex-direction: row; gap: 1rem; }
+
+  .journal__entry { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+  .journal__meta { flex-direction: row; gap: 1rem; }
+  .journal__learned { flex-direction: column; gap: 0.45rem; }
+  .journal__count { font-size: 0.62rem; }
+  .journal__dot { width: 16px; }
 
   .fact { padding-right: 0; }
   .fact + .fact { border-left: 0; padding-left: 0; }
