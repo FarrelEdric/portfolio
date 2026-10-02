@@ -746,12 +746,13 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 .journal__main { display: grid; gap: 0.6rem; }
 .journal__main .prose { max-width: 62ch; }
 /* daftar pelajaran: satu butir per baris dengan garis aksen kecil, mengikuti
-   pola daftar di Experience supaya tidak ada pembungkusan yang tidak rapi */
+   pola daftar di Experience supaya tidak ada pembungkusan yang tidak rapi.
+   Lebar penuh kolom supaya garis atasnya sejajar dengan garis tipis lain di
+   section ini (tidak berhenti di tengah kolom) */
 .journal__learned {
   display: grid; gap: 0.55rem;
   margin-top: 0.7rem; padding-top: 0.9rem;
   border-top: 1px solid var(--line);
-  max-width: 62ch;
   font-size: var(--step--1); color: var(--muted);
 }
 .journal__learned li {
