@@ -310,6 +310,25 @@ body::before {
 
 .nav__actions { display: flex; align-items: center; gap: 0.5rem; }
 
+/* ── pemilih bahasa ────────────────────────────────────── */
+/* Kode bahasa yang sedang aktif ditandai aksen, jadi terlihat jelas mana
+   yang dipakai tanpa perlu teks tambahan. */
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: 0.16rem;
+  height: 40px; padding: 0 0.5rem;
+  border: 1px solid transparent; border-radius: 2px;
+  font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.09em;
+  color: var(--muted-dim);
+  cursor: pointer;
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.lang-toggle:hover { border-color: var(--line-strong); color: var(--muted); }
+.lang-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.lang-toggle__opt { transition: color 0.3s var(--ease); }
+.lang-toggle__sep { opacity: 0.45; }
+html[data-lang='id'] .lang-toggle__opt--id,
+html:not([data-lang='id']) .lang-toggle__opt--en { color: var(--accent-ink); }
+
 .theme-toggle { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 2px; }
 .theme-toggle__track {
   position: relative;

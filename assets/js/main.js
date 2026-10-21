@@ -20,7 +20,10 @@
     if (toggle) {
       var goingLight = theme === 'dark';
       toggle.setAttribute('aria-pressed', String(theme === 'light'));
-      toggle.setAttribute('aria-label', goingLight ? 'Switch to light theme' : 'Switch to dark theme');
+      /* Label tombol tema ikut bahasa yang sedang aktif. */
+      var label = goingLight ? 'Switch to light theme' : 'Switch to dark theme';
+      toggle.setAttribute('aria-label',
+        window.FE_i18n ? window.FE_i18n.t(label) : label);
     }
     if (meta) meta.setAttribute('content', theme === 'dark' ? '#080808' : '#F5F5F2');
     swapPortrait(theme);

@@ -89,6 +89,13 @@
     </nav>
 
     <div class="nav__actions">
+      <button class="lang-toggle" id="lang-toggle" type="button"
+              aria-label="Switch to Indonesian" aria-pressed="false">
+        <span class="lang-toggle__opt lang-toggle__opt--en">EN</span>
+        <span class="lang-toggle__sep" aria-hidden="true">/</span>
+        <span class="lang-toggle__opt lang-toggle__opt--id">ID</span>
+      </button>
+
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
         <span class="theme-toggle__track" aria-hidden="true">
           <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/></svg>
@@ -1041,6 +1048,7 @@
   </div>
 </footer>
 
+<script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/slider.js" defer></script>
 </body>
