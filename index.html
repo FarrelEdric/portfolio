@@ -778,6 +778,123 @@
               <li>Building a carbon-emission calculation website</li>
               <li>Working with the Hermes agent</li>
             </ul>
+
+            <!--
+              Tombol detail log mingguan.
+              `aria-expanded` + `aria-controls` menghubungkan tombol ke panelnya,
+              sehingga pembaca layar mengumumkan keadaan buka/tutup dengan benar.
+              Panelnya memakai atribut `hidden` — bukan sekadar opacity — supaya isinya
+              tidak ikut terbaca saat tertutup.
+            -->
+            <button class="log-toggle" type="button"
+                    aria-expanded="false" aria-controls="log-mingguan-01">
+              <span class="log-toggle__text">
+                <span class="log-toggle__label">Weekly log</span>
+                <span class="log-toggle__meta">4 weeks &middot; 21 Sep &ndash; 20 Oct 2026</span>
+              </span>
+              <span class="log-toggle__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3.5 6 8 10.5 12.5 6" />
+                </svg>
+              </span>
+            </button>
+
+            <div class="log" id="log-mingguan-01" hidden>
+              <ol class="log__weeks">
+
+                <li class="log__week">
+                  <div class="log__week-head">
+                    <span class="log__week-num">Week 01</span>
+                    <span class="log__week-range">21&ndash;25 September 2026</span>
+                  </div>
+                  <p class="log__week-text">
+                    Orientation week: getting to know the working environment and what
+                    the IT division at AirNav Indonesia is actually responsible for.
+                    I joined the virtual kick-off of the <em>Program Pemagangan
+                    Lulusan Perguruan Tinggi Batch 2 Angkatan II</em>, broadcast by
+                    Kemnaker. The first real assignment was the Carbon Emission
+                    website &mdash; learning the emission calculation method with my
+                    mentor, implementing it into the site, then presenting the
+                    progress I had made.
+                  </p>
+                  <p class="log__week-takeaway">
+                    What I took from it: how a professional team actually operates, what
+                    a web build looks like end to end, and why calculation accuracy and
+                    interface feedback both matter &mdash; the mentor's notes on the UI
+                    changed how I approached the work.
+                  </p>
+                </li>
+
+                <li class="log__week">
+                  <div class="log__week-head">
+                    <span class="log__week-num">Week 02</span>
+                    <span class="log__week-range">28 September &ndash; 2 October 2026</span>
+                  </div>
+                  <p class="log__week-text">
+                    Deeper into the Carbon Emission site: fixing bugs, adding a
+                    calculation-verification feature built on the ICAO Doc 9889
+                    methodology, and reworking how the emission formula was
+                    implemented. Alongside that I worked with the other interns on
+                    repository management, started learning the Hermes agent, and began
+                    building my own portfolio site. Also the Hari Kesaktian Pancasila
+                    ceremony and the usual morning exercise.
+                  </p>
+                  <p class="log__week-takeaway">
+                    What I took from it: maintaining something already shipped, applying
+                    a published methodology correctly rather than approximating it, using
+                    AI-assisted tooling where it genuinely helps, and keeping a shared
+                    repository clean enough for other people to work in.
+                  </p>
+                </li>
+
+                <li class="log__week">
+                  <div class="log__week-head">
+                    <span class="log__week-num">Week 03</span>
+                    <span class="log__week-range">5&ndash;9 October 2026</span>
+                  </div>
+                  <p class="log__week-text">
+                    Updated the CSV template and polished the Carbon Emission site,
+                    presented progress to Mas Diki, our EVP, and fixed a bug in the PDF
+                    export. Then a new project: SWORD. I focused on modernising its
+                    UI/UX, developing the chatbot feature, and learning the AWS
+                    configuration the app needs for cloud deployment. I also studied
+                    user access management, admin features, system logging, and the
+                    OWASP Top 10. In between, I helped sort out problems on the office
+                    computers.
+                  </p>
+                  <p class="log__week-takeaway">
+                    What I took from it: a much wider view of web development &mdash;
+                    interface design, cloud infrastructure, application security and
+                    hands-on IT support in the same week.
+                  </p>
+                </li>
+
+                <li class="log__week">
+                  <div class="log__week-head">
+                    <span class="log__week-num">Week 04</span>
+                    <span class="log__week-range">12&ndash;20 October 2026</span>
+                  </div>
+                  <p class="log__week-text">
+                    Presented the personal portfolio site to Mas Diki, then carried on
+                    with SWORD: admin pages, a local database setup, chatbot tuning, and a
+                    landing-page refresh. I also learned how GitTea works, mainly to
+                    understand repository management and the team's collaboration flow.
+                    Morning exercise resumed, and the Carbon Emission site got another
+                    round of updates.
+                  </p>
+                  <p class="log__week-takeaway">
+                    What I took from it: running several web projects in parallel,
+                    refining interfaces and interactive features, working with a database
+                    and version control, and presenting finished work to a senior
+                    stakeholder. Mostly though &mdash; that continuous evaluation,
+                    documentation and adjusting to what users actually need is the part
+                    that keeps a project alive.
+                  </p>
+                </li>
+
+              </ol>
+            </div>
           </div>
         </li>
       </ol>
