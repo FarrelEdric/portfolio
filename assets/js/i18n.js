@@ -141,7 +141,10 @@
     "12–21 October 2026": "12–21 Oktober 2026",
     "AI agents": "Agen AI",
     "Four weeks of the internship at AirNav Indonesia, written up week by week — what I actually worked on, and what I took from it.": "Empat minggu magang di AirNav Indonesia, dituliskan minggu per minggu — apa yang benar-benar saya kerjakan, dan pelajaran yang saya ambil.",
-    "← Back to the journal": "← Kembali ke jurnal"
+    "← Back to the journal": "← Kembali ke jurnal",
+    "SWORD — Document Portal": "SWORD — Portal Dokumen",
+    "Document portal · RAG chatbot": "Portal dokumen · Chatbot RAG",
+    "An internal document portal for AirNav Indonesia: a searchable library of company reports, regulations and standards, so staff stop hunting through scattered files. Built with Next.js on PostgreSQL, with a retrieval-augmented chatbot that answers from the documents themselves and cites the title and page it drew on — rather than inventing an answer.": "Portal dokumen internal AirNav Indonesia: perpustakaan laporan perusahaan, regulasi, dan standar yang bisa dicari, agar staf tidak lagi berburu berkas yang berserakan. Dibangun dengan Next.js di atas PostgreSQL, dilengkapi chatbot retrieval-augmented yang menjawab dari dokumen aslinya dan menyebut judul serta halaman yang dipakai — bukan mengarang jawaban."
   },
   "attr": {
     "Farrel Edric — home": "Farrel Edric — beranda",
@@ -177,7 +180,9 @@
     "Sparkchat analytics overview: 787 total messages, 51.35% positive and 24.32% negative feedback, and a chat activity trend chart comparing customer messages with CS responses": "Ringkasan analitik Sparkchat: 787 total pesan, 51,35% umpan balik positif dan 24,32% negatif, serta grafik tren aktivitas chat yang membandingkan pesan pelanggan dengan respons CS",
     "Sparkchat report monitoring dashboard: fast vs slow response counts, total incoming chats and feedback, and five satisfaction cards. The agent name column is pixelated for privacy": "Dasbor pemantauan laporan Sparkchat: jumlah respons cepat vs lambat, total chat dan umpan balik masuk, serta lima kartu kepuasan. Kolom nama agen dipikselkan demi privasi",
     "Sparkchat customer review log: positive, neutral and negative sentiment totals with a per-conversation log. The customer, customer service and room ID columns are pixelated for privacy": "Log ulasan pelanggan Sparkchat: total sentimen positif, netral, dan negatif dengan log per percakapan. Kolom pelanggan, customer service, dan ID room dipikselkan demi privasi",
-    "Sparkchat chatbot screen answering 'Berapa sentimen positif?' with a structured response from an n8n workflow": "Layar chatbot Sparkchat yang menjawab 'Berapa sentimen positif?' dengan respons terstruktur dari alur kerja n8n"
+    "Sparkchat chatbot screen answering 'Berapa sentimen positif?' with a structured response from an n8n workflow": "Layar chatbot Sparkchat yang menjawab 'Berapa sentimen positif?' dengan respons terstruktur dari alur kerja n8n",
+    "SWORD home page: the AirNav Indonesia logo and navigation above a hero reading 'Selamat Datang di SWORD', with the chatbot launcher floating at the bottom right": "Halaman utama SWORD: logo dan navigasi AirNav Indonesia di atas hero bertuliskan 'Selamat Datang di SWORD', dengan tombol peluncur chatbot mengapung di kanan bawah",
+    "The SWORD chatbot answering a question about web application requirements, listing the documents needed and citing two source documents with their page ranges": "Chatbot SWORD menjawab pertanyaan tentang persyaratan pembuatan web, menyebutkan dokumen yang diperlukan dan mengutip dua dokumen sumber beserta rentang halamannya"
   },
   "title": {
     "en": "Farrel Edric — Software Engineer & Full-stack Developer",

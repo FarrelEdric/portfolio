@@ -382,7 +382,62 @@
 
   <div class="container projects">
 
-    <article class="project reveal">
+        <article class="project reveal">
+      <div class="project__media project__media--slider">
+        <div class="ace-slider" data-slider>
+          <div class="ace-slider__viewport">
+            <figure class="ace-slider__slide">
+              <picture>
+                <source type="image/webp" srcset="assets/projects/sword/sword-home.webp">
+                <img draggable="false" src="assets/projects/sword/sword-home.jpg" width="1440" height="900"
+                     alt="SWORD home page: the AirNav Indonesia logo and navigation above a hero reading 'Selamat Datang di SWORD', with the chatbot launcher floating at the bottom right"
+                     loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <figure class="ace-slider__slide">
+              <picture>
+                <source type="image/webp" srcset="assets/projects/sword/sword-chatbot.webp">
+                <img draggable="false" src="assets/projects/sword/sword-chatbot.jpg" width="1440" height="900"
+                     alt="The SWORD chatbot answering a question about web application requirements, listing the documents needed and citing two source documents with their page ranges"
+                     loading="lazy" decoding="async">
+              </picture>
+            </figure>
+          </div>
+
+          <button class="ace-slider__nav ace-slider__nav--prev" type="button" aria-label="Previous screenshot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <button class="ace-slider__nav ace-slider__nav--next" type="button" aria-label="Next screenshot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <div class="ace-slider__dots" role="tablist" aria-label="Choose screenshot"></div>
+
+          <p class="ace-slider__meta">
+            <span>Document portal &middot; RAG chatbot</span>
+            <span class="ace-slider__count" aria-live="polite"></span>
+          </p>
+        </div>
+      </div>
+      <div class="project__info">
+        <p class="project__idx">01</p>
+        <h3 class="h3 h3--lg">SWORD &mdash; Document Portal</h3>
+        <p class="prose prose--sm">
+          An internal document portal for AirNav Indonesia: a searchable library of
+          company reports, regulations and standards, so staff stop hunting through
+          scattered files. Built with Next.js on PostgreSQL, with a
+          retrieval-augmented chatbot that answers from the documents themselves and
+          cites the title and page it drew on &mdash; rather than inventing an answer.
+        </p>
+        <ul class="tags">
+          <li>Next.js</li><li>PostgreSQL</li><li>RAG</li><li>GLM</li>
+        </ul>
+        <dl class="project__specs">
+          <div><dt>Role</dt><dd>UI/UX &amp; chatbot</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+        </dl>
+      </div>
+    </article>
+<article class="project project--flip reveal">
       <div class="project__media project__media--slider">
         <div class="ace-slider" data-slider>
           <div class="ace-slider__viewport">
@@ -427,7 +482,7 @@
         </div>
       </div>
       <div class="project__info">
-        <p class="project__idx">01</p>
+        <p class="project__idx">02</p>
         <h3 class="h3 h3--lg">CV&nbsp;Checker</h3>
         <p class="prose prose--sm">
           An end-to-end CV screening pipeline that scores applicants automatically.
@@ -450,7 +505,7 @@
       </div>
     </article>
 
-    <article class="project project--flip reveal">
+    <article class="project reveal">
       <div class="project__media project__media--slider">
         <div class="ace-slider" data-slider>
           <div class="ace-slider__viewport">
@@ -495,7 +550,7 @@
         </div>
       </div>
       <div class="project__info">
-        <p class="project__idx">02</p>
+        <p class="project__idx">03</p>
         <h3 class="h3 h3--lg">ACE &mdash; Aviation Carbon Emission</h3>
         <p class="prose prose--sm">
           A carbon-emission calculator and monitoring system for aviation: emission
@@ -522,12 +577,12 @@
       </div>
     </article>
 
-    <article class="project reveal">
+    <article class="project project--flip reveal">
       <a class="project__media" href="https://github.com/FarrelEdric/SIWA-FINAL" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
         <img src="assets/projects/siwa.png" alt="" loading="lazy" decoding="async">
       </a>
       <div class="project__info">
-        <p class="project__idx">03</p>
+        <p class="project__idx">04</p>
         <h3 class="h3 h3--lg">SIWA &mdash; Sistem Informasi Warga</h3>
         <p class="prose prose--sm">
           A neighbourhood administration system that manages households and
@@ -602,7 +657,7 @@
         </div>
       </div>
       <div class="project__info">
-        <p class="project__idx">04</p>
+        <p class="project__idx">05</p>
         <h3 class="h3 h3--lg">Sparkchat</h3>
         <p class="prose prose--sm">
           Sentiment analysis for customer-service chat at PT Naraya Telematika:
