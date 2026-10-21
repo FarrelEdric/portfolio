@@ -225,25 +225,4 @@
       if (vis) vis.classList.add('is-empty');
     });
   }
-
-  /* ── weekly log: buka / tutup ───────────────────────── */
-  /*
-    Tombol memakai aria-expanded + aria-controls, panel memakai atribut hidden.
-    Keadaannya disimpan di DOM, bukan di variabel JS, sehingga pembaca layar
-    selalu membaca keadaan yang sama dengan yang terlihat di layar.
-    Tidak ada dependensi pada IntersectionObserver: panel yang dibuka tetap
-    terlihat walau berada di luar viewport saat tombolnya ditekan.
-  */
-  var logToggles = Array.prototype.slice.call(document.querySelectorAll('.log-toggle'));
-
-  logToggles.forEach(function (btn) {
-    var panel = document.getElementById(btn.getAttribute('aria-controls'));
-    if (!panel) return;
-
-    btn.addEventListener('click', function () {
-      var sedangTerbuka = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', sedangTerbuka ? 'false' : 'true');
-      panel.hidden = sedangTerbuka;
-    });
-  });
 })();

@@ -138,7 +138,10 @@
     "Running several projects in parallel — continuing the Carbon Emission website, refining the SWORD chatbot and landing page, building the admin pages, learning to work with the local database and GitTea, and updating the personal portfolio site. I also learned to present finished work to Mas Diki, our EVP, and saw why professional communication matters in a project review. A meeting with the operations team about the Carbon Emission dashboard made clear that the application has to follow real user requirements — including a proposal to add CO₂ calculation for the Terminal Maneuvering Area (TMA).": "Pada minggu keempat, saya meningkatkan pengalaman dalam mengembangkan beberapa proyek secara paralel, yaitu melanjutkan website Carbon Emission, menyempurnakan chatbot dan landing page SWORD, membuat halaman admin, mempelajari penggunaan database lokal dan GitTea, serta memperbarui website portofolio pribadi. Saya juga belajar mempresentasikan hasil pekerjaan kepada Mas Diki selaku EVP dan memahami pentingnya komunikasi profesional dalam proses evaluasi proyek. Selain itu, melalui meeting bersama tim operasional mengenai dashboard Carbon Emission, saya memahami bahwa pengembangan aplikasi perlu disesuaikan dengan kebutuhan nyata pengguna, termasuk usulan penambahan fitur perhitungan CO₂ pada area Terminal Maneuvering Area (TMA).",
     "What I took from it: stronger technical ability, cross-team collaboration, problem solving, and a clearer picture of how requirements from operations should shape what gets built.": "Pengalaman ini memperkuat kemampuan teknis, kolaborasi lintas tim, pemecahan masalah, dan pemahaman saya mengenai proses pengembangan aplikasi berdasarkan kebutuhan operasional.",
     "4 weeks · 21 Sep – 21 Oct 2026": "4 minggu · 21 Sep – 21 Okt 2026",
-    "12–21 October 2026": "12–21 Oktober 2026"
+    "12–21 October 2026": "12–21 Oktober 2026",
+    "AI agents": "Agen AI",
+    "Four weeks of the internship at AirNav Indonesia, written up week by week — what I actually worked on, and what I took from it.": "Empat minggu magang di AirNav Indonesia, dituliskan minggu per minggu — apa yang benar-benar saya kerjakan, dan pelajaran yang saya ambil.",
+    "← Back to the journal": "← Kembali ke jurnal"
   },
   "attr": {
     "Farrel Edric — home": "Farrel Edric — beranda",
@@ -183,6 +186,16 @@
   "desc": {
     "en": "Farrel Edric (Fransiscus Farrel Edric Wijanarko) is a software engineer and full-stack developer based in Kota Malang, Indonesia, building production web applications with Laravel, Django, React, Node.js and PostgreSQL.",
     "id": "Farrel Edric (Fransiscus Farrel Edric Wijanarko) adalah software engineer dan full-stack developer yang berdomisili di Kota Malang, Indonesia, membangun aplikasi web produksi dengan Laravel, Django, React, Node.js, dan PostgreSQL."
+  },
+  "log": {
+    "title": {
+      "en": "Weekly log — Farrel Edric",
+      "id": "Log mingguan — Farrel Edric"
+    },
+    "desc": {
+      "en": "A week-by-week log of my internship at AirNav Indonesia: what I worked on and what I took from each week.",
+      "id": "Catatan mingguan magang saya di AirNav Indonesia: apa yang saya kerjakan dan pelajaran dari tiap minggu."
+    }
   }
 };
 
@@ -276,10 +289,12 @@
       });
     });
 
-    // Judul tab dan deskripsi mesin pencari ikut berganti.
-    document.title = DATA.title[kunciBahasa] || DATA.title.en;
+    // Judul tab dan deskripsi mengikuti halaman: halaman log punya miliknya sendiri.
+    var sumber = document.documentElement.getAttribute('data-page') === 'weekly-log'
+      ? DATA.log : DATA;
+    document.title = sumber.title[kunciBahasa] || sumber.title.en;
     var meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', DATA.desc[kunciBahasa] || DATA.desc.en);
+    if (meta) meta.setAttribute('content', sumber.desc[kunciBahasa] || sumber.desc.en);
 
     document.documentElement.setAttribute('lang', pakaiID ? 'id' : 'en');
     document.documentElement.setAttribute('data-lang', pakaiID ? 'id' : 'en');

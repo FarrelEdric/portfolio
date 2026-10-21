@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-page="weekly-log">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly log — Farrel Edric</title>
+<meta name="description" content="A week-by-week log of my internship at AirNav Indonesia: what I worked on and what I took from each week.">
+<meta name="author" content="Fransiscus Farrel Edric Wijanarko">
+<meta name="theme-color" content="#080808" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F5F2" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="dark light">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>
+  /* Tema dipasang sebelum halaman digambar, supaya tidak berkedip terang. */
+  (function () {
+    var root = document.documentElement;
+    var stored = null;
+    try { stored = localStorage.getItem('fe-theme'); } catch (e) {}
+    root.setAttribute('data-theme', stored === 'light' ? 'light' : 'dark');
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Farrel Edric — home">
+      <span class="brand__mark" aria-hidden="true">FE</span>
+      <span class="brand__text">Farrel&nbsp;Edric</span>
+    </a>
+
+    <div class="nav__actions">
+      <button class="lang-toggle" id="lang-toggle" type="button"
+              aria-label="Switch to Indonesian" aria-pressed="false">
+        <span class="lang-toggle__opt lang-toggle__opt--en">EN</span>
+        <span class="lang-toggle__sep" aria-hidden="true">/</span>
+        <span class="lang-toggle__opt lang-toggle__opt--id">ID</span>
+      </button>
+
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <span class="theme-toggle__track" aria-hidden="true">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M5.6 5.6 4 4M20 20l-1.6-1.6M18.4 5.6 20 4M4 20l1.6-1.6"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container page__main" id="main">
+  <p class="eyebrow"><span class="num">06</span> Journal</p>
+  <h1 class="h2">Weekly log</h1>
+  <p class="lede">Four weeks of the internship at AirNav Indonesia, written up week by
+    week — what I actually worked on, and what I took from it.</p>
+
+<ol class="log__weeks">
+
+          <li class="log__week">
+            <div class="log__week-head">
+              <span class="log__week-num">Week 01</span>
+              <span class="log__week-range">21&ndash;25 September 2026</span>
+            </div>
+            <p class="log__week-text">
+              The first week was about understanding what a professional environment
+              actually looks like: how the IT division works and what the
+              information-technology and operations administration role at AirNav
+              Indonesia covers. I started on the Carbon Emission website — learning the
+              carbon-emission calculation method with my mentor, putting the formula into
+              the application, and presenting the progress I had made.
+            </p>
+            <p class="log__week-takeaway">
+              What I took from it: a first real experience of web application
+              development, an understanding of why calculation logic has to be exact, and
+              practice at taking feedback and applying it to improve both the interface
+              and the function.
+            </p>
+          </li>
+
+          <li class="log__week">
+            <div class="log__week-head">
+              <span class="log__week-num">Week 02</span>
+              <span class="log__week-range">28 September &ndash; 2 October 2026</span>
+            </div>
+            <p class="log__week-text">
+              Going deeper into maintaining and extending the Carbon Emission website:
+              fixing bugs, adjusting the formula to the ICAO Doc 9889 methodology,
+              updating features, and refining the template and interface. I also worked
+              with the other interns on repository management, learned to use the Hermes
+              agent, and started building my personal portfolio site.
+            </p>
+            <p class="log__week-takeaway">
+              What I took from it: a better grasp of the debugging process, applying the
+              correct calculation method, collaborating on shared software, and using AI
+              as a tool that genuinely supports the work rather than replacing it.
+            </p>
+          </li>
+
+          <li class="log__week">
+            <div class="log__week-head">
+              <span class="log__week-num">Week 03</span>
+              <span class="log__week-range">5&ndash;9 October 2026</span>
+            </div>
+            <p class="log__week-text">
+              Building features against what users actually need: updating the Carbon
+              Emission website and fixing the PDF export. I also started on SWORD,
+              focused on improving its UI/UX, developing the chatbot, and exploring the
+              AWS configuration the application needs for cloud. Alongside that I studied
+              user authentication, access-rights management, admin features, system
+              activity logging, and application security based on the OWASP Top 10.
+            </p>
+            <p class="log__week-takeaway">
+              What I took from it: application development is not only about the
+              interface — security, data management, infrastructure and how the user
+              actually feels using it matter just as much.
+            </p>
+          </li>
+
+          <li class="log__week">
+            <div class="log__week-head">
+              <span class="log__week-num">Week 04</span>
+              <span class="log__week-range">12&ndash;21 October 2026</span>
+            </div>
+            <p class="log__week-text">
+              Running several projects in parallel — continuing the Carbon Emission
+              website, refining the SWORD chatbot and landing page, building the admin
+              pages, learning to work with the local database and GitTea, and updating the
+              personal portfolio site. I also learned to present finished work to Mas
+              Diki, our EVP, and saw why professional communication matters in a project
+              review. A meeting with the operations team about the Carbon Emission
+              dashboard made clear that the application has to follow real user
+              requirements — including a proposal to add CO₂ calculation for the Terminal
+              Maneuvering Area (TMA).
+            </p>
+            <p class="log__week-takeaway">
+              What I took from it: stronger technical ability, cross-team collaboration,
+              problem solving, and a clearer picture of how requirements from operations
+              should shape what gets built.
+            </p>
+          </li>
+
+        </ol>
+
+  <p class="page__back"><a href="index.html#journal">&larr; Back to the journal</a></p>
+</main>
+
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/log-page.js" defer></script>
+</body>
+</html>

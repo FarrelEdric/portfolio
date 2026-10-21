@@ -828,12 +828,7 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 }
 .log-toggle__chevron svg { width: 15px; height: 15px; }
 .log-toggle:hover .log-toggle__chevron { border-color: var(--accent); color: var(--accent-ink); }
-.log-toggle[aria-expanded='true'] .log-toggle__chevron { transform: rotate(180deg); }
-.log-toggle[aria-expanded='true'] { color: var(--accent-ink); }
 
-/* Panel log. `hidden` menangani buka/tutup; animasi hanya hiasan halus. */
-.log { padding-top: 0.4rem; }
-.log[hidden] { display: none; }
 .log__weeks {
   display: grid; gap: 0;
   list-style: none; margin: 0; padding: 0;
@@ -866,20 +861,22 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
   color: var(--ink-soft);
 }
 
-/* Munculkan panel dengan lembut; dihormati hanya bila pengguna tidak meminta
-   animasi dikurangi. */
-@media (prefers-reduced-motion: no-preference) {
-  .log:not([hidden]) .log__week {
-    animation: log-in 0.4s var(--ease-out) both;
-  }
-  .log:not([hidden]) .log__week:nth-child(2) { animation-delay: 0.05s; }
-  .log:not([hidden]) .log__week:nth-child(3) { animation-delay: 0.1s; }
-  .log:not([hidden]) .log__week:nth-child(4) { animation-delay: 0.15s; }
+/* ── halaman log mingguan (halaman terpisah) ───────────── */
+.page__main { padding-block: clamp(2.6rem, 8vh, 5rem) 4.5rem; }
+.page__main .h2 { margin-top: 0.85rem; max-width: 30ch; }
+.page__main .log__weeks { margin-top: 2.2rem; max-width: 70ch; }
+.page__back {
+  margin-top: 2.6rem; padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
 }
-@keyframes log-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: none; }
+.page__back a {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s var(--ease);
 }
+.page__back a:hover { color: var(--accent-ink); }
+.page__back a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* ── projects ─────────────────────────────────────────── */
 .projects { margin-top: clamp(2.5rem, 6vh, 4rem); display: grid; gap: clamp(3rem, 8vh, 6rem); }

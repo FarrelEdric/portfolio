@@ -691,6 +691,12 @@
 
       <div class="skills reveal">
         <div class="skills__group">
+          <h3 class="skills__label">AI agents</h3>
+          <ul class="tags">
+            <li>Hermes</li><li>Antigravity</li>
+          </ul>
+        </div>
+        <div class="skills__group">
           <h3 class="skills__label">Languages</h3>
           <ul class="tags">
             <li>PHP</li><li>JavaScript</li><li>Python</li><li>Java</li><li>Dart</li><li>HTML</li><li>CSS</li><li>SQL</li>
@@ -786,15 +792,10 @@
               <li>Working with the Hermes agent</li>
             </ul>
 
-            <!--
-              Tombol detail log mingguan.
-              `aria-expanded` + `aria-controls` menghubungkan tombol ke panelnya,
-              sehingga pembaca layar mengumumkan keadaan buka/tutup dengan benar.
-              Panelnya memakai atribut `hidden` — bukan sekadar opacity — supaya isinya
-              tidak ikut terbaca saat tertutup.
-            -->
-            <button class="log-toggle" type="button"
-                    aria-expanded="false" aria-controls="log-mingguan-01">
+            <!-- Tautan ke halaman log mingguan tersendiri. Dulu panel ini
+                 terbuka di tempat; sekarang pindah halaman agar tiap minggu
+                 punya ruang baca yang layak dan URL-nya bisa dibagikan. -->
+            <a class="log-toggle" href="weekly-log.html">
               <span class="log-toggle__text">
                 <span class="log-toggle__label">Weekly log</span>
                 <span class="log-toggle__meta">4 weeks &middot; 21 Sep &ndash; 21 Oct 2026</span>
@@ -802,99 +803,10 @@
               <span class="log-toggle__chevron" aria-hidden="true">
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3.5 6 8 10.5 12.5 6" />
+                  <path d="M6 3.5 10.5 8 6 12.5" />
                 </svg>
               </span>
-            </button>
-
-            <div class="log" id="log-mingguan-01" hidden>
-              <ol class="log__weeks">
-
-                <li class="log__week">
-                  <div class="log__week-head">
-                    <span class="log__week-num">Week 01</span>
-                    <span class="log__week-range">21&ndash;25 September 2026</span>
-                  </div>
-                  <p class="log__week-text">
-                    The first week was about understanding what a professional environment
-                    actually looks like: how the IT division works and what the
-                    information-technology and operations administration role at AirNav
-                    Indonesia covers. I started on the Carbon Emission website — learning the
-                    carbon-emission calculation method with my mentor, putting the formula into
-                    the application, and presenting the progress I had made.
-                  </p>
-                  <p class="log__week-takeaway">
-                    What I took from it: a first real experience of web application
-                    development, an understanding of why calculation logic has to be exact, and
-                    practice at taking feedback and applying it to improve both the interface
-                    and the function.
-                  </p>
-                </li>
-
-                <li class="log__week">
-                  <div class="log__week-head">
-                    <span class="log__week-num">Week 02</span>
-                    <span class="log__week-range">28 September &ndash; 2 October 2026</span>
-                  </div>
-                  <p class="log__week-text">
-                    Going deeper into maintaining and extending the Carbon Emission website:
-                    fixing bugs, adjusting the formula to the ICAO Doc 9889 methodology,
-                    updating features, and refining the template and interface. I also worked
-                    with the other interns on repository management, learned to use the Hermes
-                    agent, and started building my personal portfolio site.
-                  </p>
-                  <p class="log__week-takeaway">
-                    What I took from it: a better grasp of the debugging process, applying the
-                    correct calculation method, collaborating on shared software, and using AI
-                    as a tool that genuinely supports the work rather than replacing it.
-                  </p>
-                </li>
-
-                <li class="log__week">
-                  <div class="log__week-head">
-                    <span class="log__week-num">Week 03</span>
-                    <span class="log__week-range">5&ndash;9 October 2026</span>
-                  </div>
-                  <p class="log__week-text">
-                    Building features against what users actually need: updating the Carbon
-                    Emission website and fixing the PDF export. I also started on SWORD,
-                    focused on improving its UI/UX, developing the chatbot, and exploring the
-                    AWS configuration the application needs for cloud. Alongside that I studied
-                    user authentication, access-rights management, admin features, system
-                    activity logging, and application security based on the OWASP Top 10.
-                  </p>
-                  <p class="log__week-takeaway">
-                    What I took from it: application development is not only about the
-                    interface — security, data management, infrastructure and how the user
-                    actually feels using it matter just as much.
-                  </p>
-                </li>
-
-                <li class="log__week">
-                  <div class="log__week-head">
-                    <span class="log__week-num">Week 04</span>
-                    <span class="log__week-range">12&ndash;21 October 2026</span>
-                  </div>
-                  <p class="log__week-text">
-                    Running several projects in parallel — continuing the Carbon Emission
-                    website, refining the SWORD chatbot and landing page, building the admin
-                    pages, learning to work with the local database and GitTea, and updating the
-                    personal portfolio site. I also learned to present finished work to Mas
-                    Diki, our EVP, and saw why professional communication matters in a project
-                    review. A meeting with the operations team about the Carbon Emission
-                    dashboard made clear that the application has to follow real user
-                    requirements — including a proposal to add CO₂ calculation for the Terminal
-                    Maneuvering Area (TMA).
-                  </p>
-                  <p class="log__week-takeaway">
-                    What I took from it: stronger technical ability, cross-team collaboration,
-                    problem solving, and a clearer picture of how requirements from operations
-                    should shape what gets built.
-                  </p>
-                </li>
-
-              </ol>
-            </div>
+            </a>
           </div>
         </li>
       </ol>
