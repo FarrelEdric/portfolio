@@ -45,7 +45,6 @@
     "2026-present": "2026–sekarang",
     "Internship": "Magang",
     "Worked on IT and operations administration alongside a carbon-emission monitoring project for the aviation side of the business.": "Menangani administrasi TI dan operasional bersamaan dengan proyek pemantauan emisi karbon untuk sisi penerbangan bisnis.",
-    "Built the ACE (AirNav Carbon Emission) monitoring application — emission records, spreadsheet import/export and reporting on Laravel 12 with PostgreSQL.": "Membangun aplikasi pemantauan ACE (AirNav Carbon Emission) — pencatatan emisi, impor/ekspor spreadsheet, dan pelaporan dengan Laravel 12 serta PostgreSQL.",
     "Jul 2025 — Nov 2025 · 5 months": "Jul 2025 — Nov 2025 · 5 bulan",
     "Contributed to frontend and backend work on internal and client-facing applications, designing, developing and deploying web solutions with cross-functional teams.": "Berkontribusi pada pekerjaan frontend dan backend untuk aplikasi internal dan aplikasi klien, merancang, mengembangkan, serta menerapkan solusi web bersama tim lintas fungsi.",
     "Built and maintained responsive interfaces with React.js and Tailwind CSS.": "Membangun dan memelihara antarmuka responsif dengan React.js dan Tailwind CSS.",
