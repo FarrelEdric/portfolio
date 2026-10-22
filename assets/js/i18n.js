@@ -143,7 +143,8 @@
     "← Back to the journal": "← Kembali ke jurnal",
     "SWORD — Document Portal": "SWORD — Portal Dokumen",
     "Document portal · RAG chatbot": "Portal dokumen · Chatbot RAG",
-    "An internal document portal for AirNav Indonesia: a searchable library of company reports, regulations and standards, so staff stop hunting through scattered files. Built with Next.js on PostgreSQL, with a retrieval-augmented chatbot that answers from the documents themselves and cites the title and page it drew on — rather than inventing an answer.": "Portal dokumen internal AirNav Indonesia: perpustakaan laporan perusahaan, regulasi, dan standar yang bisa dicari, agar staf tidak lagi berburu berkas yang berserakan. Dibangun dengan Next.js di atas PostgreSQL, dilengkapi chatbot retrieval-augmented yang menjawab dari dokumen aslinya dan menyebut judul serta halaman yang dipakai — bukan mengarang jawaban."
+    "An internal document portal for AirNav Indonesia: a searchable library of company reports, regulations and standards, so staff stop hunting through scattered files. Built with Next.js on PostgreSQL, with a retrieval-augmented chatbot that answers from the documents themselves and cites the title and page it drew on — rather than inventing an answer.": "Portal dokumen internal AirNav Indonesia: perpustakaan laporan perusahaan, regulasi, dan standar yang bisa dicari, agar staf tidak lagi berburu berkas yang berserakan. Dibangun dengan Next.js di atas PostgreSQL, dilengkapi chatbot retrieval-augmented yang menjawab dari dokumen aslinya dan menyebut judul serta halaman yang dipakai — bukan mengarang jawaban.",
+    "Building the SWORD document system": "Membangun sistem dokumen SWORD"
   },
   "attr": {
     "Farrel Edric — home": "Farrel Edric — beranda",
