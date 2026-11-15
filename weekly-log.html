@@ -148,6 +148,73 @@
 
         </ol>
 
+
+  <!-- Bukti progres periode ini -->
+  <section class="evidence" aria-labelledby="bukti-progres">
+    <p class="evidence__kicker">Progress evidence &middot; 21 Sep &ndash; 21 Oct 2026</p>
+    <h2 class="evidence__title" id="bukti-progres">Carbon Emission dashboard</h2>
+    <p class="evidence__intro">The dashboard I built for the operations side of AirNav Indonesia answers one question: how much carbon a route actually saves. Pick an origin and a destination and it returns the distance and time saved, the fuel burned, the CO&#8322; avoided and the cost saving. The map puts that route over Indonesian airspace, and the analysis panel tracks the reduction month by month. Flask on the backend, SQLite locally with PostgreSQL and MySQL supported for deployment, plus Excel and PDF export for the reports the operations team needs.</p>
+
+    <ol class="evidence__list">
+      <li class="evidence__item">
+        <figure class="evidence__figure">
+          <picture>
+            <source type="image/webp" srcset="assets/journal/carbon-emission/carbon-1-utama.webp">
+            <img src="assets/journal/carbon-emission/carbon-1-utama.png" width="1600" height="1000"
+                 alt="The Carbon Emission dashboard: a route selector at the top, the emission calculator on the left and the route map on the right" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="evidence__cap">
+            <span class="evidence__num">01</span>
+            <span class="evidence__head">Route, calculation and map on one screen</span>
+            <span class="evidence__desc">One page does the whole job: choose the route, read the result, see it on the map. Switching the origin or destination recalculates without a page reload.</span>
+          </figcaption>
+        </figure>
+      </li>
+      <li class="evidence__item evidence__item--narrow">
+        <figure class="evidence__figure">
+          <picture>
+            <source type="image/webp" srcset="assets/journal/carbon-emission/carbon-2-kalkulator.webp">
+            <img src="assets/journal/carbon-emission/carbon-2-kalkulator.png" width="420" height="561"
+                 alt="The emission calculator for the Jakarta to Denpasar route, showing CO2 avoided, distance and fuel saved, and emissions per flight" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="evidence__cap">
+            <span class="evidence__num">02</span>
+            <span class="evidence__head">CGK&ndash;DPS, quarter II 2026 &mdash; 1,153 t CO&#8322; avoided</span>
+            <span class="evidence__desc">For Jakarta&ndash;Denpasar the app returns 1,153 tonnes of CO&#8322; avoided, 22.4 km of distance saved, 366 tonnes of fuel saved and 253.4 kg of CO&#8322; per flight &mdash; the figures the operations team reviews.</span>
+          </figcaption>
+        </figure>
+      </li>
+      <li class="evidence__item">
+        <figure class="evidence__figure">
+          <picture>
+            <source type="image/webp" srcset="assets/journal/carbon-emission/carbon-3-radar.webp">
+            <img src="assets/journal/carbon-emission/carbon-3-radar.png" width="862" height="442"
+                 alt="A map of Indonesian airspace with the selected Jakarta to Denpasar route drawn over it" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="evidence__cap">
+            <span class="evidence__num">03</span>
+            <span class="evidence__head">The route over Indonesian airspace</span>
+            <span class="evidence__desc">The map draws the selected route on a radar layer, so a number is tied to an actual flight path instead of floating on its own.</span>
+          </figcaption>
+        </figure>
+      </li>
+      <li class="evidence__item">
+        <figure class="evidence__figure">
+          <picture>
+            <source type="image/webp" srcset="assets/journal/carbon-emission/carbon-4-analisis.webp">
+            <img src="assets/journal/carbon-emission/carbon-4-analisis.png" width="862" height="609"
+                 alt="A monthly chart of CO2 reduced, with a summary panel beside it" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="evidence__cap">
+            <span class="evidence__num">04</span>
+            <span class="evidence__head">Reduction per month</span>
+            <span class="evidence__desc">The analysis panel aggregates CO&#8322; reduced per month, which makes the progress reviewable per period rather than one route at a time.</span>
+          </figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+
   <p class="page__back"><a href="index.html#journal">&larr; Back to the journal</a></p>
 </main>
 

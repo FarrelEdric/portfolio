@@ -1154,3 +1154,46 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
   body { background: #fff; color: #000; }
   .section { break-inside: avoid; }
 }
+
+/* ── bukti progres (halaman log mingguan) ──────────────── */
+.evidence {
+  margin-top: 3rem; padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.evidence__kicker {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent-ink);
+}
+.evidence__title {
+  margin-top: 0.55rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.evidence__intro {
+  margin-top: 0.9rem; max-width: 64ch;
+  color: var(--muted); line-height: 1.72;
+}
+.evidence__list {
+  margin-top: 2.2rem; padding: 0; list-style: none;
+  display: grid; gap: 2.2rem;
+}
+.evidence__item { display: grid; gap: 0.9rem; }
+.evidence__item--narrow { max-width: 460px; }
+.evidence__figure {
+  margin: 0; overflow: hidden;
+  border: 1px solid var(--line); border-radius: 16px;
+  background: var(--bg-raise);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05), 0 14px 34px -20px rgb(0 0 0 / 0.5);
+}
+.evidence__figure img { display: block; width: 100%; height: auto; }
+.evidence__cap {
+  display: grid; gap: 0.3rem;
+  padding: 0.9rem 1.05rem 1.05rem;
+  border-top: 1px solid var(--line);
+}
+.evidence__num {
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em;
+  color: var(--accent-ink);
+}
+.evidence__head { font-size: 0.95rem; font-weight: 600; color: var(--ink); }
+.evidence__desc { font-size: 0.85rem; line-height: 1.6; color: var(--muted); }

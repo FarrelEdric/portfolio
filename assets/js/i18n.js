@@ -128,7 +128,18 @@
     "SWORD — Document Portal": "SWORD — Portal Dokumen",
     "Document portal · RAG chatbot": "Portal dokumen · Chatbot RAG",
     "An internal document portal for AirNav Indonesia: a searchable library of company reports, regulations and standards, so staff stop hunting through scattered files. Built with Next.js on PostgreSQL, with a retrieval-augmented chatbot that answers from the documents themselves and cites the title and page it drew on — rather than inventing an answer.": "Portal dokumen internal AirNav Indonesia: perpustakaan laporan perusahaan, regulasi, dan standar yang bisa dicari, agar staf tidak lagi berburu berkas yang berserakan. Dibangun dengan Next.js di atas PostgreSQL, dilengkapi chatbot retrieval-augmented yang menjawab dari dokumen aslinya dan menyebut judul serta halaman yang dipakai — bukan mengarang jawaban.",
-    "Dashboard · Residents · Houses · Payments · Billing · Expenses": "Dasbor · Penghuni · Rumah · Pembayaran · Tagihan · Pengeluaran"
+    "Dashboard · Residents · Houses · Payments · Billing · Expenses": "Dasbor · Penghuni · Rumah · Pembayaran · Tagihan · Pengeluaran",
+    "Progress evidence · 21 Sep – 21 Oct 2026": "Bukti progres · 21 Sep – 21 Okt 2026",
+    "Carbon Emission dashboard": "Dasbor Emisi Karbon",
+    "The dashboard I built for the operations side of AirNav Indonesia answers one question: how much carbon a route actually saves. Pick an origin and a destination and it returns the distance and time saved, the fuel burned, the CO₂ avoided and the cost saving. The map puts that route over Indonesian airspace, and the analysis panel tracks the reduction month by month. Flask on the backend, SQLite locally with PostgreSQL and MySQL supported for deployment, plus Excel and PDF export for the reports the operations team needs.": "Dasbor yang saya bangun untuk sisi operasional AirNav Indonesia menjawab satu pertanyaan: berapa karbon yang benar-benar dihemat sebuah rute. Pilih bandara asal dan tujuan, lalu aplikasi mengembalikan jarak dan waktu yang dihemat, bahan bakar terpakai, CO₂ yang dicegah, dan penghematan biaya. Peta menempatkan rute itu di ruang udara Indonesia, dan panel analisis melacak pengurangannya dari bulan ke bulan. Flask di backend, SQLite secara lokal dengan dukungan PostgreSQL dan MySQL untuk deployment, plus ekspor Excel dan PDF untuk laporan yang dibutuhkan tim operasional.",
+    "Route, calculation and map on one screen": "Rute, perhitungan, dan peta dalam satu layar",
+    "One page does the whole job: choose the route, read the result, see it on the map. Switching the origin or destination recalculates without a page reload.": "Satu halaman mengerjakan semuanya: pilih rute, baca hasilnya, lihat di peta. Mengganti bandara asal atau tujuan langsung menghitung ulang tanpa memuat ulang halaman.",
+    "CGK–DPS, quarter II 2026 — 1,153 t CO₂ avoided": "CGK–DPS, triwulan II 2026 — 1.153 ton CO₂ dicegah",
+    "For Jakarta–Denpasar the app returns 1,153 tonnes of CO₂ avoided, 22.4 km of distance saved, 366 tonnes of fuel saved and 253.4 kg of CO₂ per flight — the figures the operations team reviews.": "Untuk rute Jakarta–Denpasar, aplikasi menampilkan 1.153 ton CO₂ yang dicegah, 22,4 km jarak yang dihemat, 366 ton bahan bakar yang dihemat, dan 253,4 kg CO₂ per penerbangan — angka yang ditinjau tim operasional.",
+    "The route over Indonesian airspace": "Rute di ruang udara Indonesia",
+    "The map draws the selected route on a radar layer, so a number is tied to an actual flight path instead of floating on its own.": "Peta menggambar rute terpilih di atas lapisan radar, sehingga sebuah angka terikat pada jalur penerbangan nyata, bukan berdiri sendiri.",
+    "Reduction per month": "Pengurangan per bulan",
+    "The analysis panel aggregates CO₂ reduced per month, which makes the progress reviewable per period rather than one route at a time.": "Panel analisis mengumpulkan CO₂ yang dikurangi per bulan, sehingga progres dapat ditinjau per periode, bukan per rute satu per satu."
   },
   "attr": {
     "Farrel Edric — home": "Farrel Edric — beranda",
@@ -172,7 +183,11 @@
     "House management view: cards for each house showing its number, occupancy status and current resident. Personal data is blurred": "Tampilan manajemen rumah: kartu tiap rumah berisi nomor, status huni, dan penghuni saat ini. Data pribadi disamarkan",
     "Payment records: dues payments per house with type, period and amount. Personal data is blurred": "Catatan pembayaran: iuran per rumah dengan jenis, periode, dan jumlah. Data pribadi disamarkan",
     "Billing summary: what each house owes for security and cleaning fees, with totals. Personal data is blurred": "Rekap tagihan: kewajiban tiap rumah untuk iuran satpam dan kebersihan, beserta totalnya. Data pribadi disamarkan",
-    "Expense list: recorded neighbourhood expenses with category, date and amount": "Daftar pengeluaran: catatan pengeluaran RT dengan kategori, tanggal, dan jumlah"
+    "Expense list: recorded neighbourhood expenses with category, date and amount": "Daftar pengeluaran: catatan pengeluaran RT dengan kategori, tanggal, dan jumlah",
+    "The Carbon Emission dashboard: a route selector at the top, the emission calculator on the left and the route map on the right": "Dasbor Emisi Karbon: pemilih rute di atas, kalkulator emisi di kiri, dan peta rute di kanan",
+    "The emission calculator for the Jakarta to Denpasar route, showing CO2 avoided, distance and fuel saved, and emissions per flight": "Kalkulator emisi untuk rute Jakarta–Denpasar: CO2 yang dicegah, jarak dan bahan bakar yang dihemat, serta emisi per penerbangan",
+    "A map of Indonesian airspace with the selected Jakarta to Denpasar route drawn over it": "Peta ruang udara Indonesia dengan rute Jakarta–Denpasar yang dipilih tergambar di atasnya",
+    "A monthly chart of CO2 reduced, with a summary panel beside it": "Grafik CO2 yang dikurangi per bulan, dengan panel ringkasan di sampingnya"
   },
   "title": {
     "en": "Farrel Edric — Software Engineer & Full-stack Developer",
