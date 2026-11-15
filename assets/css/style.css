@@ -1197,3 +1197,9 @@ html[data-theme='dark'] .timeline__main .prose { margin-top: 0.3rem; }
 }
 .evidence__head { font-size: 0.95rem; font-weight: 600; color: var(--ink); }
 .evidence__desc { font-size: 0.85rem; line-height: 1.6; color: var(--muted); }
+
+/* ── Hero tanpa foto ──────────────────────────────────────── */
+/* Kolom visual (foto, glow, cakram FE, caption) disembunyikan dan teks
+   memakai lebar penuh. Untuk memunculkan lagi, hapus tiga aturan ini. */
+.hero__visual { display: none; }
+.hero__inner { grid-template-columns: minmax(0, 1fr); }
