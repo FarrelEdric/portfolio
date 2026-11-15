@@ -91,12 +91,6 @@
     "A short log from my job — six months of building, breaking and learning. One entry per month, written as I go.": "Catatan singkat dari pekerjaan saya — enam bulan membangun, memperbaiki, dan belajar. Satu entri per bulan, ditulis sambil berjalan.",
     "01 / 06 written": "01 / 06 tertulis",
     "Month 01": "Bulan 01",
-    "Development of a Carbon Emissions Dashboard": "Pengembangan Dasbor Emisi Karbon",
-    "Two things defined this month. First, the maths: I worked through the aircraft carbon-emission formula — how fuel burn, flight distance and flight frequency turn into a CO₂ figure, and what the assumptions behind it actually mean.": "Ada dua hal yang membentuk bulan ini. Pertama, matematikanya: saya menelusuri rumus emisi karbon pesawat — bagaimana konsumsi bahan bakar, jarak terbang, dan frekuensi penerbangan berubah menjadi angka CO₂, serta apa arti asumsi di baliknya.",
-    "Second, I turned that understanding into a working web application for calculating carbon emission, wiring the formula into something people can actually use. Alongside it, I started learning to work with the Hermes agent — picking up how to run tasks through it and where it genuinely speeds up the work.": "Kedua, saya mengubah pemahaman itu menjadi aplikasi web yang berfungsi untuk menghitung emisi karbon, menyalakan rumus tersebut menjadi sesuatu yang benar-benar bisa dipakai orang. Bersamaan dengan itu, saya mulai belajar bekerja dengan agen Hermes — memahami cara menjalankan tugas melaluinya dan di bagian mana ia benar-benar mempercepat pekerjaan.",
-    "Aircraft carbon-emission formula and its underlying assumptions": "Rumus emisi karbon pesawat dan asumsi yang mendasarinya",
-    "Building a carbon-emission calculation website": "Membangun situs perhitungan emisi karbon",
-    "Working with the Hermes agent": "Bekerja dengan agen Hermes",
     "Weekly log": "Log mingguan",
     "Week 01": "Minggu 01",
     "Week 02": "Minggu 02",
@@ -134,7 +128,6 @@
     "SWORD — Document Portal": "SWORD — Portal Dokumen",
     "Document portal · RAG chatbot": "Portal dokumen · Chatbot RAG",
     "An internal document portal for AirNav Indonesia: a searchable library of company reports, regulations and standards, so staff stop hunting through scattered files. Built with Next.js on PostgreSQL, with a retrieval-augmented chatbot that answers from the documents themselves and cites the title and page it drew on — rather than inventing an answer.": "Portal dokumen internal AirNav Indonesia: perpustakaan laporan perusahaan, regulasi, dan standar yang bisa dicari, agar staf tidak lagi berburu berkas yang berserakan. Dibangun dengan Next.js di atas PostgreSQL, dilengkapi chatbot retrieval-augmented yang menjawab dari dokumen aslinya dan menyebut judul serta halaman yang dipakai — bukan mengarang jawaban.",
-    "Building the SWORD document system": "Membangun sistem dokumen SWORD",
     "Dashboard · Residents · Houses · Payments · Billing · Expenses": "Dasbor · Penghuni · Rumah · Pembayaran · Tagihan · Pengeluaran"
   },
   "attr": {
